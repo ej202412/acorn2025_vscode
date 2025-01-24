@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step07_function.html</title>
+</head>
+<body>
+    <script>
+        //함수의 매개변수를 선언할 때 default 값을 지정할 수 있다
+        function showInfo(num=0, name="이름", addr="주소"){
+            console.log(`num:${num} name:${name} addr:${addr}`);
+        }
+        //함수 호출하면서 매개변수에 순서대로 값 전달하기
+        showInfo(1, "kim", "seoul");
+        showInfo();
+        showInfo(2);
+        showInfo(3, "monkey");
+
+        //rest parameter
+        function printMsgs(...args){
+            //args 는 매개변수에 전달된 값들이 들어있는 배열이다
+            console.log(args);
+        }
+        printMsgs();
+        printMsgs("hi");
+        printMsgs("hi", "bye", "hello");
+    </script>
+</body>
+</html>
